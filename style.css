@@ -11,7 +11,9 @@ body{
 }
 
 .gallery{
-    width: 100%;
+    width: 75%;  
+    position: relative;
+
 }
 
 .gallery-container{
@@ -72,6 +74,12 @@ body{
     opacity:.4;
     transform: translateX(-50%);
 }
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    height: 100px;
+}
 
 .gallery-controls button{
     background-color: transparent;
@@ -87,7 +95,8 @@ body{
 }
 
 .gallery-controls-previous{
-    position: relative;
+    position: absolute;
+    top: 75px;
 }
 
 .gallery-controls-previous::before{
@@ -97,8 +106,9 @@ body{
     display: inline-block;
     height: 5px;
     left: -30px;
+    padding: 10px;
     position: absolute;
-    top: 25%;
+    bottom: 10px;
     transform: rotate(135deg) translateY(-50%);
     transition: left 0.15s ease-in-out;
     width: 5px;
@@ -109,7 +119,7 @@ body{
 }
 
 .gallery-controls-next{
-    position: relative;
+    position: absolute;
 }
 
 .gallery-controls-next::before{
@@ -121,13 +131,13 @@ body{
     padding: 10px;
     position: absolute;
     right:-30px;
-    top: 25%;
+    top: 15px;
     transform: rotate(-45deg) translateY(-50%);
     transition: right 0.15s ease-in-out;
     width: 5px;
 }
 
-.gallery-controls-next:hover::before{
+.gallery-controls-next:hover:before{
     right: -40px;
 }
 
